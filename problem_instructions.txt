@@ -1,0 +1,1281 @@
+=========================
+Day 0: Print Hello World! 
+=========================
+
+For this challenge, all you have to do is print the following two lines:
+
+Hello World. 
+Welcome to 30 Days of Code.
+
+==================
+Day 1: Data Types!
+==================
+
+For this challenge, consider the following inputs (you don't need to read any input):
+
+    5.35
+    'a'
+    false
+    100
+    "I am a code monkey"
+    true
+    17.3
+    'c'
+    "derp"
+
+For each line above, print out if it is an instance of a primitive or referenced type 
+as well as which data type it is (using the typical examples above).
+
+Note: This challenge is focused only on Java data types, but you can submit the answer 
+in other languages as well. Hint: In Java, String is a referenced type. Most challenges 
+in upcoming days are language-agnostic.
+
+> Output Format
+
+Output 9 lines. Print one line for each of the input given above in the following format:
+
+MainDataTypeOfInstance : SpecificDataTypeOfInstance
+
+For example, if the input is:
+123
+
+Your output should be:
+Primitive : int
+
+Make sure you spell everything correctly and capitalize your entries. Also, don't forget 
+spaces and colon in between the main and specific data types! 
+
+==================
+Day 2: Arithmetic!
+==================
+
+Practice how to do arithmetic with code in this challenge! If given the meal price, 
+tip percentage, and tax percentage, we can find the final price of a meal.
+
+> Input Format
+
+Three numbers, (M, T, and X), each on separate lines:
+- M will be a double representing the original price of the meal.
+- T will be a integer representing the percentage that the customer wants to tip based 
+off of the original price of the meal.
+- X will be an integer representing the tax percentage that the customer has to pay 
+based off of the original price of the meal.
+
+> Output Format
+
+A string stating... "The final price of the meal is $-."
+
+where the final price of the meal is substituted for the dash. The price should be 
+rounded to the nearest integer (dollar) - the code for rounding has already been added 
+in the editor if you are coding in Java.
+
+> Sample Input
+
+12.00
+20
+8
+
+> Sample Output
+
+The final price of the meal is $15.
+
+> Explanation
+
+M = 12, T = 20, X = 8
+tip = (20 * 12) / 100 = 2.4
+tax = (8 * 12) / 100 = 0.96
+final price = 12 + 2.4 + 0.96 = 15.36
+Officially, the price of the meal is $15.36, but rounded to the nearest dollar (integer), 
+the meal is $15.
+
+==========================
+Day 3: If-Else Statements!
+==========================
+
+This problem will test your knowledge on "if-else" statements.
+
+Given an integer N as input, check the following:
+
+    If N is odd, print "Weird".
+    If N is even and, in between the range of 2 and 5(inclusive), print "Not Weird".
+    If N is even and, in between the range of 6 and 20(inclusive), print "Weird".
+    If N is even and N>20, print "Not Weird".
+
+We have given you partially completed code in the editor, complete it to solve the problem.
+
+> Input Format
+
+There is a single line of input: integer N.
+
+> Constraints
+
+	1 <= N <= 100
+
+> Output Format
+
+Print "Weird" if the number is weird. Otherwise, print "Not Weird". 
+Do not print the quotation marks.
+
+> Sample Input 1
+3
+
+> Sample Output 1
+Weird
+
+==============================================
+Day 4: Logical Operators + Class vs. Instance!
+==============================================
+
+You will create a class Person and write a constructor that takes an integer, initial_Age. 
+In this constructor, you should check that the initial_Age is not negative because we 
+can't have people with negative ages.
+
+If the initial_Age is negative, set the instance's age equal to zero then print:
+"This person is not valid, setting age to 0."
+without the quotations..
+
+Inside of this class, you will also create an instance variable called age and if 
+initial_Age is not negative, then you will set age to equal the value of initial_Age. 
+In addition, you will write an instance method, amIOld(), that prints whether people 
+are old or not to the console.
+
+In amIOld(), do the following things:
+
+    If the age of the Person instance is less than 13, then print "You are young."
+    If the age of the Person instance is equal or greater than 13, but less 18, print "You are a teenager."
+    Otherwise, print "You are old."
+
+In addition, create an instance function called yearPasses() that increases the age of 
+the person instance by one.
+
+Much of the structure of the code is given to you below, but in the future, you will 
+write this. The code that will create instances of your Person class is in the main 
+function. You may not understand it all yet, but take a look just to see what's going on. 
+Do not change any of the variable names or remove any of the code given.
+
+> Input Format
+
+First line contains T, number of test cases. Each test case contains an integer age, 
+representing age of the person.
+
+> Constraints
+
+	1 <= T <=4
+	-5 <= age <= 30
+
+> Output Format
+
+The code that will test your methods is already in the editor. All you have to do is 
+edit the methods given to you in the editor so that they perform correctly as stated 
+above. If your methods are implemented correctly, each testcase will print out either 
+two or three lines.
+
+If the age is less than zero, then your program should print out:
+
+This person is not valid, setting age to 0.
+You are young.
+You are young.
+
+If the age is equal or greater than 0, then your program should print out two lines. 
+The first line that the program prints out should be the output of amIOld() on the 
+current age. Then, three years pass via yearPasses() and the second line the program 
+prints should be the output of amIOld() after the time has passed.
+
+> Sample Input
+
+4
+-1
+10
+16
+18
+
+> Sample Output
+
+This person is not valid, setting age to 0.
+You are young.
+You are young.
+
+You are young.
+You are a teenager.
+
+You are a teenager.
+You are old.
+
+You are old.
+You are old.
+
+=============
+Day 5: Loops!
+=============
+
+In this problem you will test your knowledge of loops. 
+Given three integers a, b, and N, output the following series:
+
+a+2^0*b, a + 2^0*b + 2^1*b, ......, a + 2^0*b + 2^1*b + ... + 2^(N-1)*b
+
+> Input Format
+
+The first line will contain the number of testcases T. 
+Each of the next T lines will have three integers, a, b, and N.
+
+> Constraints
+
+	0 <= T <= 500
+	0 <=a, b <= 50
+	1 <= N <= 15
+
+> Output Format
+
+Print the answer to each test case in a separate line.
+
+> Sample Input
+
+2    
+5 3 5
+0 2 10
+
+> Sample Output
+
+8 14 26 50 98
+2 6 14 30 62 126 254 510 1022 2046
+
+====================
+Day 6: Let's Review!
+====================
+
+Your teacher has given you the task of drawing a staircase structure. Being an expert 
+programmer, you decided to make a program to draw it for you instead. Given the required 
+height, can you print a staircase as shown in the example?
+Note: The last line has zero spaces before it.
+
+> Constraints
+
+	1 <= N <= 100
+
+> Input Format
+
+You are given an integer N depicting the height of the staircase.
+
+> Output Format
+
+Print a staircase of height N that consists of # symbols and spaces as given in > Sample Output.
+
+> Sample Input
+
+6
+
+> Sample Output
+
+     #
+    ##
+   ###
+  ####
+ #####
+######
+
+==============
+Day 7: Arrays!
+==============
+
+An array is a series of elements of the same type placed in contiguous memory locations 
+that can be individually referenced by adding an index to a unique identifier.
+
+You'll be given an array of N integers, and you have to print the integers in reverse order.
+
+> Input Format
+
+The first line of input contains N, the number of integers. The next line contains 
+N integers separated by a space.
+
+> Constraints
+
+	1 <= N <= 1000
+	1 <= A[i] <= 10000, where A[i] is the ith integer in the array.
+
+> Output Format
+
+Print the N integers of the array in the reverse order on a single line separated by a space.
+
+> Sample Input
+
+4
+1 4 3 2
+
+> Sample Output
+
+2 3 4 1
+
+=============================
+Day 8: Dictionaries and Maps!
+=============================
+
+You are given a phone book that consists of your friend's names and their phone number. 
+After that you will be given your friend's name as query. For each query, print the 
+phone number of your friend.
+
+> Input Format
+
+The first line will have an integer N denoting the number of entries in the phone book. 
+Each entry consists of two lines: a name and the corresponding phone number.
+
+After these, there will be some queries. Each query will contain name of a friend. 
+Read the queries until end-of-file.
+
+> Constraints
+
+A name consists of only lower-case English letters and it may be in the format 
+'first-name last-name' or in the format 'first-name'. Each phone number has exactly 
+8 digits without any leading zeros.
+
+	1 <= N <= 10^4
+	1 <= queries <= 10^4
+
+> Output Format
+
+For each case, print "Not found" without quotes, if the friend has no entry in the phone book. 
+Otherwise, print the friend's name and phone number. See sample output for the exact format.
+
+To make the problem easier, we provided a portion of the code in the editor. You can 
+either complete that code or write completely on your own.
+
+> Sample Input
+
+3
+sam
+99912222
+tom
+11122222
+harry
+12299933
+sam
+edward
+harry
+
+> Sample Output
+
+sam=99912222
+Not found
+harry=12299933
+
+=================
+Day 9: Recursion!
+=================
+
+Euclid's Algorithm for Computing the GCD of two integers
+
+Given two integers, x and y, their GCD (greatest common divisor) can be calculated 
+recursively using Euclid's Algorithm, which essentially says that if x equals y, then 
+GCD(x,y)=x; otherwise, GCD(x,y)=GCD(x-y,y) if x>y. Note that this logic can be further 
+optimized for a more efficient implementation.
+
+Given the starter code in your editor, complete the function body so it returns the GCD 
+of two input integers, x and y.
+
+> Input Format
+
+Two space-separated integers, x and y.
+
+> Constraints
+
+	1 <= x, y <= 10^6
+
+> Output Format
+
+Print the GCD of x and y as an integer.
+
+> Sample Input
+
+1 5
+
+> Sample Output
+
+1
+
+=======================
+Day 10: Binary Numbers!
+=======================
+
+For this challenge, convert a given number, n, from decimal (base 10) to binary
+(base 2).
+
+> Input Format
+
+The first line contains a single integer, T, the number of test cases. The T
+subsequent lines of test cases each contain a single value, n, the base 10
+positive integer to be converted.
+
+> Constraints
+
+	1 <= T <= 1000
+	1 <= n <= 2^31
+
+> Output Format
+
+For each test case, print the value of n in binary on a new line.
+
+> Sample Input
+
+2
+4
+5
+
+> Sample Output
+
+100
+101
+
+================================
+Day 11: 2D-Arrays + More Review!
+================================
+
+Given a 6x6 2D Array, A:
+
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+
+We can find 16 hourglasses in A; we define an hourglass in A to be a subset of values 
+with indexes falling in this pattern in A's graphical representation:
+
+a b c
+  d
+e f g
+
+The sum of an hourglass is the sum of the values within it.
+
+Your task is to calculate the sum of every hourglass in some 2D Array, A, and print the 
+largest value (maximum of the sums) as your answer.
+
+> Input Format
+
+There are 6 lines of input, where each line contains 6 space-separated integers describing 
+2D Array A; every value in A will be in the inclusive range of -9 to 9.
+
+> Constraints
+
+	-9 <= A[i][j] <= 9
+	0 <= i, j <= 5
+
+> Output Format
+
+Print the largest (maximum) hourglass sum found in A.
+
+> Sample Input
+
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0
+
+> Sample Output
+
+19
+
+===================
+Day 12: Inheritance
+===================
+
+You are given two classes, Student and Grade, where Student is the base class 
+and Grade is the derived class. Completed code for Student and stub code for 
+Grade are provided for you in the editor. Note that Grade inherits all the 
+properties of Student.
+
+Complete the Grade class by writing a class constructor (Grade(String,String,int,int)) 
+and a char calculate() method. The calculate method should return the character 
+representative of a Student's *Grade. Score as defined in this chart:
+
+Score					Grade
+score < 40				D
+40 <= score < 60			B
+60 <= score < 75			A
+75 <= score < 90			E
+90 <= score <= 100		O
+
+> Input Format
+
+Input is already handled for you by the code pre-filled in the editor. There are 
+4 lines of input containing first name, last name, phone, and score, respectively.
+
+> Constraints
+
+	4 <= |first name|, |last name| <= 10
+	phone contains exactly 7 digits
+	1 <= score <= 100
+
+> Output Format
+
+Output is already handled for you by the code pre-filled in the editor. Your output will 
+be correct if your Grade class constructor and calculate method are properly written.
+
+> Sample Input
+
+Heraldo
+Memelli
+8135627
+90
+
+> Sample Output
+
+First Name: Heraldo
+Last Name: Memelli
+Phone: 8135627
+Grade: O
+
+=========================
+Day 13: Abstract Classes!
+=========================
+
+In the editor we have provided the abstract Book class and a Solution class. 
+In the Solution class we created instance of a class called MyBook. Your task 
+is to write just the MyBook class. The class MyBook mustn't be public.
+
+> Input Format
+
+Input from STDIN is already handled in the code given in the editor. 
+MyBook's constructor must have the following parameters: String title, 
+String author, and int price.
+
+> Output Format
+
+The void display() method should print and label the respective title, author, and 
+price of the book's instance (with each value on its own line) like so:
+
+Title: $title
+Author: $author
+Price: $price
+
+> Sample Input
+
+The Alchemist
+Paulo Coelho
+248
+
+> Sample Output
+
+Title: The Alchemist
+Author: Paulo Coelho
+Price: 248
+
+========================
+Day 14: All about Scope!
+========================
+
+The absolute difference between two integers, a and b, is |a-b|. The maximum 
+absolute difference of two integers in a set of positive integers, elements, 
+is the largest absolute difference of any two integers in elements. The class 
+Difference is started for you in the editor. It has a private instance array 
+(elements) for storing N non-negative integers, and a public integer 
+(maxDifference) for storing the maximum absolute difference.
+
+Your task is to write the class constructor for Difference and the 
+computeDifference method so that it finds the maximum absolute difference 
+between any two numbers in N and stores it in maxDifference.
+
+> Input Format
+
+The first line contains a positive integer, N, denoting the size of array elements. 
+The second line contains N space-separated positive integers describing elements.
+
+> Constraints
+
+	1 <= N <= 10
+	1 <= elements[i] <= 100, where 0 <= i <= N-1
+
+> Output Format
+
+Print the maximum absolute difference between any two integers in elements.
+
+> Sample Input
+
+3
+1 2 5
+
+> Sample Output
+
+4
+
+> Explanation
+
+|1-2| = 1  
+|1-5| = 4  
+|2-5| = 3  
+
+We print the maximum of these absolute differences, which is 4.
+
+====================
+Day 15: Linked List!
+====================
+
+You are given a class Node in the editor which has one instance pointer 'next' 
+pointing to next node and an integer data to store the data in Node. You are 
+also given a pointer 'head' pointing to the head node of a linked list and an 
+integer data to add to the list. Create a new node with the given integer. 
+Insert this node at the tail of the linked list and return the head node. The 
+given head pointer may be null, meaning that the initial list is empty.
+
+Code for input/output is already handled in the editor. You have to complete 
+the function insert given in the editor. It takes two arguments: the head node 
+of the linked list and an integer data to be inserted.
+
+> Input Format
+
+First line contains T, the number of testcases. Each test case contains an 
+integer to be inserted at tail of linked list.
+
+> Output Format
+
+Output the data in each node separated by space.
+
+> Sample Input
+
+4
+2
+3
+4
+1
+
+> Sample Output
+
+2 3 4 1
+
+> Explanation
+
+T=4
+Initially head is null and 2 is inserted. 3,4,1 are inserted at the tail of linked list 
+hence the linked list becomes 2 3 4 1
+
+================
+Day 16: Sorting!
+================
+
+The absolute difference between two integers, a and b, is |a-b|. The minimum 
+absolute difference between two integers in a list A of positive integers, is 
+the smallest absolute difference between any two integers in A.
+
+Given a list A = {a0, a1, ..., aN-1} of unsorted integers, find and print the 
+pair (or pairs) of elements having the minimum absolute difference.
+
+Note: More than one pair of elements may have the same absolute difference.
+
+> Input Format
+
+The first line contains a single integer N, denoting the length of list A.
+The second line contains N space-separated integers, a0, a1, ..., aN-1, 
+representing the elements in A.
+
+> Constraints
+
+    2 <= N <= 2*10^5
+    -10^7 <= A[i] <= 10^7
+    A[i] != A[j], where 0 <= i < j <= N-1
+
+> Output Format
+
+Print the space-separated pair of elements having the minimum absolute 
+difference in ascending order. If more than one pair meets this criterion, 
+print them consecutively, separated by a space, in ascending order on a single 
+line. Because we are printing space-separated pairs, some elements may appear 
+more than once in your output.
+
+> Sample Input 2
+
+12
+-20 -3916237 -357920 -3620601 7374819 -7330761 30 6246457 -6461594 266854 -520 -470 
+
+> Sample Output 2
+
+-520 -470 -20 30
+
+> Explanation
+Our minimum absolute difference is 50. The pairs (-470, -520) and (-20, 30) both have 
+this difference.
+
+===================
+Day 17: Exceptions!
+===================
+
+Create a class Calculator which consists of a single method power(int,int). 
+This method takes two integers, n and p, as parameters and finds np. If either 
+n or p is negative, then the method must throw an exception which says 
+"n and p should be non-negative".
+
+Code for handling Input/Output is already provided in the editor. Please read 
+the partially completed code in the editor and complete it.
+
+Note: The class Calculator mustn't be public.
+
+No need to worry about constraints, there won't be any overflow if your code 
+is correct.
+
+> Input Format
+
+First line contains T, the number of test cases. Next T lines contain two 
+integers n and p separated by a space.
+
+> Output Format
+
+Output T lines. For each test case if n and p are positive then print np else 
+print "n and p should be non-negative" without quotes.
+
+========================
+Day 18: Queues & Stacks!
+========================
+
+A palindrome is a "word, phrase, number, or other sequence of characters which reads the 
+same backwards and forwards." Can you determine if a given string, s, is a palindrome?
+
+To solve this challenge, we must first take each character in s, enqueue it in a queue, 
+and also push it onto a stack. Once that's done, we must dequeue the first character 
+from the queue and pop the top character off the stack, then compare the two characters 
+to see if they are the same; as long as the characters match, we continue dequeueing, 
+popping, and comparing each character until our containers are empty (a non-match means 
+s isn't a palindrome).
+
+Write the following four functions/methods in class Palindrome:
+
+    void pushCharacter(char ch): Pushes a character onto a stack.
+    void enqueueCharacter(char ch): Enqueues a character in a queue.
+    char popCharacter(): Pops and returns the top character.
+    char dequeueCharacter(): Dequeues and returns the first character.
+
+Code handling Input/Output and determining if s is palindrome is provided in the editor.
+
+> Input Format
+
+A single line containing string s.
+
+Note: s will always be lowercase.
+
+> Output Format
+
+If s is a palindrome, print "The word, s, is a palindrome."
+Otherwise, print "The word, s, is not a palindrome." without quotes
+
+> Sample Input
+
+racecar
+
+> Sample Output
+
+The word, racecar, is a palindrome.
+
+===================
+Day 19: Interfaces!
+===================
+
+Interfaces are an important concept in Java and in a few other languages like C#.
+
+Here you are given an interface AdvancedArithmetic which contains a method signature
+int divisorSum(int n). (The divisorSum function just takes an integer as input and 
+return the sum of all its divisors.) Your only task is to write a class Calculator 
+which implements the interface.
+
+Note : The class Calculator shouldn't be public.
+
+> Input Format
+
+Only one line containing integer n
+
+> Constraints
+
+	1 <= n <= 1000
+
+> Output Format
+
+In the first line print "I implemented: AdvancedArithmetic" without quotes. In the next 
+line print the sum of divisors of n as given in problem statement.
+
+> Sample Input
+
+6
+
+> Sample Output
+
+I implemented: AdvancedArithmetic
+12
+
+> Explanation
+
+Divisors of 6 are 1, 2, 3, and 6. (1 + 2 + 3 + 6 = 12.)
+
+=====================================
+Day 20: Review + More String Methods!
+=====================================
+
+Given a string S, find number of words in that string. For this problem a word is 
+defined by a string of one or more English letters.
+
+Note: Space or any of the special characters like ![,?.\_'@+] will act as a delimiter.
+
+> Input Format
+The string will only contain lower case english alphabets, upper case english alphabets, 
+blank spaces and this special characters: ![,?.\_'@+].
+
+> Constraints
+
+	1 <= |S| <= 400000
+
+> Output Format
+In the first line, print number of words in the string. The words don't need to be 
+unique. Also print each word in a separate line.
+
+> Sample Input
+
+He is a very very good boy, isn't he?
+
+> Sample Output
+
+10
+He
+is
+a
+very
+very
+good
+boy
+isn
+t
+he
+
+================
+Day 21: Generics
+================
+
+Generic methods are a very efficient way to handle multiple datatypes using a single method.
+
+Note: Fewer languages are enabled for this challenge because the concept of Generics is not 
+common in many languages.
+
+Let's say you have an integer array and a string array. You have to write a single 
+method printArray that can print all the elements of both arrays. The method should 
+be able to accept both integer arrays or string arrays.
+
+You are given code in the editor. Complete the code so that it prints the following lines:
+
+1
+2
+3
+Hello
+World
+
+Do not use method overloading because your answer will not be accepted.
+
+===========================
+Day 22: Binary Search Trees
+===========================
+
+The height of a binary tree is the number of nodes on the largest path from root to 
+any leaf. You are given a pointer root pointing to the root of a binary search tree. 
+Return the height of the tree.
+
+You only have to complete the function getHeight given in the editor.
+
+> Input Format
+
+First line contains T, the number of test cases. Next T lines contain an integer data 
+to be added to the binary search tree.
+
+> Output Format
+
+Output the height of the binary search tree.
+
+> Sample Input
+
+7
+3
+5
+2
+1
+4
+6
+7
+
+> Sample Output
+
+4
+
+> Explanation
+
+The Binary Search tree formed with the given values is
+
+      3  
+     /  \
+    2    5
+   /    /  \
+  1    4    6
+             \
+              7
+
+The maximum length root to leaf path is 3->5->6->7. There are 4 nodes in this path. 
+Therefore the height of the binary tree = 4.
+
+=============================
+Day 23: Review + Binary Trees
+=============================
+
+You are given a pointer root pointing to the root of a binary tree. You need to print 
+the level order traversal of this tree. In level order traversal, we visit the nodes 
+level by level from left to right. For example:
+
+         3
+       /   \
+      5     2
+     / \    /
+    1   4  6
+
+For the above tree, the level order traversal is 3 -> 5 -> 2 -> 1 -> 4 -> 6.
+
+HINT: A queue could be helpful.
+
+The code for input/output is already handled in the editor. You only have to complete 
+the function levelOrder given in the editor. 
+
+> Input Format
+
+First line contains T, the number of test cases. Next T lines contain an integer data 
+to be added to the binary search tree.
+
+> Output Format
+
+Print the values of the level order traversal separated by spaces.
+
+> Sample Input
+
+6
+3
+5
+4
+7
+2
+1
+
+> Sample Output
+
+3 2 5 1 4 7 
+
+> Explanation
+
+Level 1:        3
+              /   \
+Level 2:     2     5
+            /     / \
+Level 3:   1     4   7 
+
+We need to print the nodes level by level. We process each level from left to right.
+Level Order Traversal: 3 -> 2 -> 5 -> 1 -> 4 -> 7
+
+========================================
+Day 24: More Review + More Linked Lists!
+========================================
+
+You're given the pointer head pointing to the head node of a linked list, where the 
+data in the nodes is in non decreasing order. Delete as few nodes as possible so that 
+the list does not contain any value more than once. The given head pointer may be null 
+indicating that the list is empty. Adjust the next pointers to ensure that the 
+remaining nodes form a single sorted linked list.
+
+The code for handling input/output is already given in the editor. You have to complete 
+the function removeDuplicates given in the editor which takes one argument - the head 
+of the linked list.
+
+> Input Format
+
+First line contains T, the number of testcases. Each test case contains an integer 
+data to be inserted at tail of linked list. Note: The input data for each test case 
+is always given in non-decreasing order.
+
+> Output Format
+
+Print the data in each node of linked list separated by a space after the deletion 
+of duplicates as given in problem statement.
+
+> Sample Input
+
+6
+1
+2
+2
+3
+3
+4
+
+> Sample Output
+
+1 2 3 4 
+
+> Explanation
+
+T = 6
+2 and 3 are repeated so after deleting the nodes with repeated values the linked list becomes:
+
+1 2 3 4
+
+===================================
+Day 25: Running Time and Complexity
+===================================
+
+In this challenge, you will determine if a given number X is prime or not. A prime 
+number is a natural number greater than 1 that has no positive divisors other than 
+1 and itself. You will be given N numbers and for each, you will print out "Prime" 
+if the number is prime or "Not prime" if the number is not prime.
+
+If this is too easy, create a method that decides if X is prime or not in O(vX) time. 
+Think modulos and square root! If you are having trouble, try creating an O(X) time 
+algorithm and see whether it solves the problem or not.
+
+> Input Format
+
+The first line of the input is T, total number of test cases. Each of the next line 
+contains an integer N.
+
+> Constraints
+
+    1 <= T <= 20
+    1 <= N <= 2*10^9
+
+> Output Format
+
+For each test case print Prime if N is prime, otherwise print Not prime.
+
+> Sample Input
+
+3
+12
+5
+7
+
+> Sample Output
+
+Not prime
+Prime
+Prime
+
+> Explanation
+
+There are three testcases 12, 5, and 7. 12 is not prime, 5 is prime, and 7 is prime.
+
+=========================================
+Day 26: Testing Part I + Implementations!
+=========================================
+
+The Head Librarian at a library wants you to make a program that calculates the fine 
+for returning the book after the return date. You are given the actual and the expected 
+return dates. Calculate the fine as follows:
+
+- If the book is returned on or before the expected return date, no fine will be charged, 
+in other words fine is 0.
+- If the book is returned in the same month as the expected return date, 
+Fine = 15 Hackos × Number of late days.
+- If the book is not returned in the same month but in the same year as the expected 
+return date, Fine = 500 Hackos × Number of late months.
+- If the book is not returned in the same year, the fine is fixed at 10000 Hackos.
+
+> Input Format
+
+You are given the actual and the expected return dates in D M Y format respectively. 
+There are two lines of input. The first line contains the D M Y values for the actual 
+return date and the next line contains the D M Y values for the expected return date.
+
+> Output Format
+
+Output a single value equal to the fine.
+
+> Sample Input
+
+9 6 2015
+6 6 2015
+
+> Sample Output
+
+45
+
+> Explanation
+
+Since the actual date is 3 days later than expected, fine is calculated as 15×3=45 Hackos.
+
+=======================
+Day 27: Testing Part II
+=======================
+
+This challenge is very different from the traditional ones because it requires you to 
+generate valid test cases for a problem instead of solving the problem. There are no 
+sample testcases, you simply have to generate test values for the problem that satisfy 
+both the problem's Input Format and the criterion laid out in the Task section.
+
+> Problem Statement
+
+A Discrete Mathematics professor has a class of N students. Frustrated with their lack of 
+discipline, the professor decides to cancel class if fewer than K students are present when 
+class starts. Given the arrival time of each student, determine if the class is canceled.
+
+> Input Format
+
+The first line of input contains T, the number of test cases.
+
+Each test case spans two lines. The first has two space-separated integers, N (students 
+in the class) and K (the cancelation threshold). The second contains N space-separated 
+integers (a1, ..., aN) describing the students' arrival times.
+
+Note: Non-positive arrival times (a[i]=0) indicate the student arrived early or on time; 
+positive arrival times (a[i]>0) indicate the student arrived ai minutes late. If a 
+student arrives exactly on time (a[i]=0), the student is considered to have entered 
+before the class started.
+
+> Output Format
+
+For each test case, print the word YES if the class is canceled or NO if it is not, on a new line.
+
+> Example
+
+When properly solved, this input:
+
+2
+4 3
+-1 -3 4 2
+4 2
+0 -1 2 1
+
+Should produce this output:
+
+YES
+NO
+
+For the first test case, K=3. The professor wants at least 3 students in attendance, but 
+only 2 arrive on time (-3 and -1). Thus, the class is canceled.
+
+For the second test case, K=2. The professor wants at least 2 students in attendance, 
+and 2 do arrive on time (0 and -1). Thus, the class is not canceled.
+
+> Your Task
+
+Create and print one or more test cases for the problem above that meet the following criterion:
+T <= 5
+1 <= N <= 200
+1 <= K <= N
+-1000 <= a[i] <= 1000, where i is a member of [1, N]
+The value of N should be distinct across all the test cases.
+Array 'a' must have at least one zero, one positive integer, and one negative integer.
+
+You must create five test cases to earn the maximum possible score.
+
+The output for your test case (were it to run against a correct solution) should be:
+
+YES
+NO
+YES
+NO
+YES
+
+Print your test cases as output. For example:
+
+print('1')
+print('4 3')
+print('-1 -3 4 2')
+print('5 2')
+print('0 -1 2 1 4')
+
+> Scoring
+
+If you submit x correct test cases, your score will be 20.0*x. If you submit more than 
+5 test cases, only the first 5 test cases will be evaluated.
+
+================================================
+Day 28: RegEx, Patterns, and Intro to Databases!
+================================================
+
+RegEx helps us easily search for or match a Pattern in text. Before searching for a 
+Pattern, we must specify it using some well-defined syntax.
+
+Given a string, determine if it's a valid Pattern or not. The string may contain spaces.
+
+Note: This is a java only challenge, a RegEx is only valid if you can compile it using 
+the Pattern.compile method. You may find using a try-catch block helpful here.
+
+> Input Format
+
+The first line of input contains an integer, T (the number of test cases).
+The T subsequent lines of test cases each contain a string of characters describing a RegEx.
+
+> Constraints
+
+	1 <= T <= 100
+
+> Output Format
+
+On a new line for each test case, print Valid if the given RegEx's syntax is correct; 
+otherwise, print Invalid.
+
+> Sample Input
+
+3
+([A-Z])(.+)
+[AZ[a-z](a-z)
+batcatpat(nat
+
+> Sample Output
+
+Valid
+Invalid
+Invalid
+
+> Explanation
+
+The second and third test cases have unbalanced brackets and will throw a 
+PatternSyntaxException when compiled. For example:
+
+[AZ[a-z](a-z) is Invalid, but [AZ[a-z](a-z)] would be Valid.
+batcatpat(nat is Invalid, but batcatpat(nat) would be Valid.
+
+=========================================
+Day 29: Look at Everything We've Learned!
+=========================================
+
+Suppose you have some string S having length N that is indexed from 0 to N-1. 
+You also have some string R that is the reverse of string S. S is funny if the 
+condition |S[i]-S[i-1]|=|R[i]-R[i-1]| is true for every i from 1 to N-1.
+
+Note: For some string str, str[i] denotes the ASCII value of the ith 0-indexed 
+character in str. The absolute value of some integer, x, is written as |x|.
+
+> Input Format
+
+The first line contains an integer, T (the number of test cases).
+The T subsequent lines each contain one string S.
+
+> Constraints
+
+	1 <= T <= 10
+	2 <= length of S <= 10000
+
+> Output Format
+
+For each string S, print whether it is Funny or Not Funny on a new line 
+(i.e.: the ith line of output should be the answer for input string Si).
+
+> Sample Input
+
+2
+acxz
+bcxz
+
+> Sample Output
+
+Funny
+Not Funny
+
+> Explanation
+
+Test Case 0: S = "acxz"
+|c-a| = 2 = |x-z|
+|x-c| = 21 = |c-x|
+|z-x| = 2 = |a-c|
+We print Funny.
+
+Test Case 1: S = "bcxz"
+|c-b| = 1, but |x-z| = 2
+We stop evaluating the string (as |c-b| != |x-z|), and print Not Funny.
